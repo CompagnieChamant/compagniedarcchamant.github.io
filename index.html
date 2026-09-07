@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Compagnie d'Arc de Chamant | Tir à l'arc dans l'Oise</title>
+
+  <meta name="description" content="Découvrez la Compagnie d'Arc de Chamant, club de tir à l'arc dans l'Oise. Entraînements, découverte du tir à l'arc, événements et vie de la compagnie.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #252525;
+      background: #f7f5f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #17251f;
+      color: white;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background:
+        linear-gradient(rgba(20,35,29,0.65), rgba(20,35,29,0.65)),
+        url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero p:first-child {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero-text {
+      font-size: 20px;
+      max-width: 650px;
+      margin: 0 auto 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 26px;
+      margin: 5px;
+      border-radius: 4px;
+      background: #c49a55;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid white;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title span {
+      color: #a17a3e;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      color: #17251f;
+      margin-top: 8px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: 45px auto 0;
+    }
+
+    .card {
+      background: white;
+      padding: 35px 28px;
+      text-align: center;
+      border-radius: 6px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #17251f;
+      margin-bottom: 12px;
+      font-family: Georgia, serif;
+      font-size: 24px;
+    }
+
+    .info {
+      background: #17251f;
+      color: white;
+    }
+
+    .info h2 {
+      color: white;
+    }
+
+    .info-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .info-box {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .info-box h3 {
+      color: #d4ad6a;
+      margin-bottom: 15px;
+      font-family: Georgia, serif;
+      font-size: 25px;
+    }
+
+    .news {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .news-item {
+      background: white;
+      padding: 25px;
+      margin-bottom: 15px;
+      border-left: 4px solid #c49a55;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      background: #101915;
+      color: #ccc;
+      text-align: center;
+      padding: 35px 20px;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 12px;
+      }
+
+      .cards,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🏹 COMPAGNIE D'ARC DE CHAMANT</div>
+
+  <nav>
+    <a href="#compagnie">La Compagnie</a>
+    <a href="#tir">Le tir à l'arc</a>
+    <a href="#infos">Infos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <div class="hero-content">
+
+    <p>Chamant · Oise</p>
+
+    <h1>Compagnie d'Arc de Chamant</h1>
+
+    <p class="hero-text">
+      Bienvenue sur le site de notre compagnie.
+      Découvrez le tir à l'arc, nos entraînements,
+      nos événements et la vie de notre association.
+    </p>
+
+    <a href="#compagnie" class="button">Découvrir la compagnie</a>
+    <a href="#contact" class="button secondary">Nous contacter</a>
+
+  </div>
+</section>
+
+
+<section id="compagnie">
+
+  <div class="section-title">
+    <span>Notre association</span>
+    <h2>Une passion pour le tir à l'arc</h2>
+  </div>
+
+  <p class="intro">
+    La Compagnie d'Arc de Chamant rassemble des passionnés
+    de tir à l'arc dans un esprit de convivialité, de partage
+    et de progression.
+    <br><br>
+    Que vous soyez débutant ou archer confirmé,
+    notre compagnie vous accueille pour découvrir
+    et pratiquer le tir à l'arc.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🎯</div>
+      <h3>Précision</h3>
+      <p>
+        Développez votre technique, votre concentration
+        et votre précision au fil des entraînements.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏹</div>
+      <h3>Passion</h3>
+      <p>
+        Partagez la passion du tir à l'arc
+        avec les membres de la compagnie.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Convivialité</h3>
+      <p>
+        Une association fondée sur le plaisir
+        de pratiquer et de se retrouver.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="tir" class="info">
+
+  <div class="section-title">
+    <span>Découvrir</span>
+    <h2>Le tir à l'arc</h2>
+  </div>
+
+  <div class="info-grid">
+
+    <div class="info-box">
+      <h3>Les entraînements</h3>
+      <p>
+        Retrouvez ici les informations concernant
+        les jours et horaires d'entraînement,
+        ainsi que le lieu de pratique.
+      </p>
+      <br>
+      <a href="#contact" class="button">En savoir plus</a>
+    </div>
+
+    <div class="info-box">
+      <h3>Rejoindre la compagnie</h3>
+      <p>
+        Vous souhaitez découvrir le tir à l'arc
+        ou rejoindre notre association ?
+        Contactez-nous pour connaître les modalités
+        d'inscription.
+      </p>
+      <br>
+      <a href="#contact" class="button">Nous contacter</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="section-title">
+    <span>La vie du club</span>
+    <h2>Actualités</h2>
+  </div>
+
+  <div class="news">
+
+    <div class="news-item">
+      <h3>🏹 Bienvenue sur le site de la Compagnie</h3>
+      <p>
+        Retrouvez prochainement ici toutes les actualités,
+        événements et informations de la compagnie.
+      </p>
+    </div>
+
+    <div class="news-item">
+      <h3>📅 Prochain événement</h3>
+      <p>
+        Les informations concernant les prochains événements
+        seront publiées ici.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+  <div class="section-title">
+    <span>Nous trouver</span>
+    <h2>Contact</h2>
+  </div>
+
+  <p>
+    <strong>Compagnie d'Arc de Chamant</strong>
+  </p>
+
+  <p>
+    📍 Chamant, Oise
+  </p>
+
+  <br>
+
+  <p>
+    Pour toute question concernant les entraînements,
+    les inscriptions ou la vie de la compagnie,
+    n'hésitez pas à nous contacter.
+  </p>
+
+  <br>
+
+  <!-- Nous remplacerons ces informations par les vraies -->
+  <p>
+    📧 <strong>Adresse e-mail à ajouter</strong>
+  </p>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Compagnie d'Arc de Chamant</strong>
+  </p>
+
+  <p>
+    © 2026 · Tous droits réservés
+  </p>
+
+</footer>
+
+</body>
+</html>
